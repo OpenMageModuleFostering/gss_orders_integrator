@@ -32,6 +32,7 @@
   </message>
   <message name="ordersIntegrationOrdergetOrdersResponse">
     <part name="orders" type="typens:ordersArray" />
+    <part name="total" type="xsd:int" />
   </message>
   <portType name="{{var wsdl.handler}}PortType">
     <operation name="ordersIntegrationOrdergetOrders">

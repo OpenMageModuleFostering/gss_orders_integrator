@@ -31,6 +31,7 @@
 	</wsdl:message>
 	<wsdl:message name="ordersIntegrationOrdergetOrdersResponse">
 		<wsdl:part name="orders" type="typens:ordersArray" />
+		<wsdl:part name="total" type="xsd:int" />
 	</wsdl:message>
 	<wsdl:portType name="{{var wsdl.handler}}PortType">
 	  <wsdl:operation name="ordersIntegrationOrdergetOrders">

@@ -63,10 +63,12 @@ class GSS_OrdersIntegration_Model_Order_Api extends Mage_Sales_Model_Api_Resourc
 					->getCollection()
 					->addAttributeToFilter('status', array('in' => $arr_status))
 					->addAttributeToFilter('created_at', array('from'=>$magefromDate, 'to'=>$magetoDate))
-					->addAttributeToSort('entity_id', 'DESC')
-	                ->setPageSize($pageLimit)
-	            	->setCurPage($page);
-
+					->addAttributeToSort('entity_id', 'DESC');
+		$retval['total'] = $orders->count();
+		$orders=$orders
+				->setPageSize($pageLimit)
+				->setCurPage($page)
+				->load();
 		foreach ($orders as $order) {
 			if ($order->getGiftMessageId() > 0) {
 				$order->setGiftMessage(
@@ -106,7 +108,7 @@ class GSS_OrdersIntegration_Model_Order_Api extends Mage_Sales_Model_Api_Resourc
 
 			$arr_orders[] = $result;
 		}
-					
-		return $arr_orders;
+		$retval['orders']=$arr_orders;			
+		return $retval;
   	}
 }
