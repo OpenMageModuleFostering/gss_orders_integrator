@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <api>
+  	<resources>
+        <order translate="title" module="ordersIntegration">
+            <title>List of Orders</title>
+            <model>ordersIntegration/order_api</model>
+            <acl>order</acl>
+            <methods>
+                <getOrders translate="title" module="ordersIntegration">
+                    <title>Retrieve List of Orders</title>
+                    <method>getOrders</method>
+                    <acl>order/getOrders</acl>
+                </getOrders>
+            </methods>
+        </order>
+    </resources>
+    <resources_alias>
+        <ordersIntegration_order>order</ordersIntegration_order>
+    </resources_alias>
+	<rest>
+	    <mapping>
+	        <ordersIntegration_order>
+	            <post>
+	                <method>getOrders</method>
+	            </post>
+	        </ordersIntegration_order>
+	    </mapping>
+	</rest>
+	<acl><!-- Access Control List  to our resources, this tree structure is displayed in "Resource Roles" panel when you open role to edit -->
+	    <resources>
+	        <order translate="title" module="ordersIntegration">
+	            <title>GSS API</title>
+	            <getOrders translate="title" module="ordersIntegration">
+	                <title>Retrieve List of Orders</title>
+	            </getOrders>
+	        </order>
+	    </resources>
+	</acl>
+    <v2>
+        <resources_function_prefix>
+            <ordersIntegration_order>ordersIntegrationOrder</ordersIntegration_order>
+        </resources_function_prefix>
+    </v2>
+  </api>
+</config>
