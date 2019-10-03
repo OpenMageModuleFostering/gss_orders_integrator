@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/GSS_Orders_Integrator",
+    "name": "OpenMageModuleFostering\/GSS_Orders_Integrator",
     "type": "magento-module",
     "license": "GNU-General-Public-License",
     "homepage": "",
     "description": "The app will sync across orders of the selected status. The supported Magento version is 1.5.0.0 and later.",
     "authors": [
-    {
-        "name": "Ezequiel Reyno",
-        "email": "ezequiel@gosweetspot.com"
-    }
-],
+        {
+            "name": "Ezequiel Reyno",
+            "email": "ezequiel@gosweetspot.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
