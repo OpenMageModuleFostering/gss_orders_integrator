@@ -1,5 +1,5 @@
 {
-    "name": "OpenMageModuleFostering\/GSS_Orders_Integrator",
+    "name": "openmage-module-fostering\/gss_orders_integrator",
     "type": "magento-module",
     "license": "GNU-General-Public-License",
     "homepage": "",
